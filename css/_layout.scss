@@ -52,7 +52,6 @@ section {
 }
 
 .cards {
-  // @include flex-center(column);
   @include grid-center();
   padding: 3.125rem 0 6.25rem 0;
   gap: 1rem;
@@ -98,6 +97,79 @@ section {
       line-height: 1.3rem;
       letter-spacing: -0.2px;
       font-weight: 500;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  section {
+    display: flex;
+    padding: 0;
+  }
+
+  .wrapper {
+    max-width: 100%;
+    height: 100vh;
+    @include flex-center(column);
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4.5rem;
+    width: 100%;
+  }
+
+  .info {
+    padding: 0;
+    max-width: 445px;
+    text-align: left;
+
+    h1 {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+  }
+
+  .reviews {
+    @include flex-center(column);
+    align-items: flex-end;
+
+    .review {
+      @include flex-center(row);
+      width: 445px;
+      height: 56px;
+
+      .stars {
+        margin-bottom: 0;
+        margin-right: 2rem;
+      }
+
+      &:nth-child(1) {
+        margin-right: 6rem;
+      }
+      &:nth-child(2) {
+        margin-right: 3rem;
+      }
+    }
+  }
+
+  .cards {
+    grid-auto-flow: column;
+    gap: 1.87rem;
+    padding: 0;
+    align-items: end;
+
+    .card {
+      height: 234px;
+      width: 350px;
+
+      &:nth-child(1) {
+        margin-bottom: 2rem;
+      }
+      &:nth-child(2) {
+        margin-bottom: 1rem;
+      }
     }
   }
 }
