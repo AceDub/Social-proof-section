@@ -1,0 +1,253 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Spartan', sans-serif;
+  background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+  background-position: left top, right bottom;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 376px) {
+  body {
+    background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+section {
+  padding: 0 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper {
+  max-width: 400px;
+}
+
+.info {
+  padding: 5rem 0 2.5rem 0;
+  text-align: center;
+}
+
+.info h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2rem;
+  padding-bottom: 1.13rem;
+  letter-spacing: -1px;
+  color: #502050;
+}
+
+.info p {
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: -0.5px;
+  color: #937b92;
+}
+
+.reviews {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.reviews .review {
+  width: 100%;
+  background-color: #f7f2f7;
+  height: 4.875rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #502050;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.reviews .review .stars {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-auto-flow: column;
+  gap: 8.45px;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3.125rem 0 6.25rem 0;
+  gap: 1rem;
+}
+
+.cards .card {
+  border-radius: 0.5rem;
+  background-color: #502050;
+  color: white;
+  width: 100%;
+  height: 248px;
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 320px) {
+  .cards .card {
+    padding: 1.5rem;
+  }
+}
+
+.cards .card .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8rem;
+  padding: 0.5rem 0 1.8rem 0;
+}
+
+.cards .card .user .user-info {
+  padding-left: 1.4rem;
+}
+
+.cards .card .user img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.cards .card .user .name {
+  font-weight: 700;
+}
+
+.cards .card .user .status {
+  color: #ee68a4;
+}
+
+.cards .card .comment {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  letter-spacing: -0.2px;
+  font-weight: 500;
+}
+/*# sourceMappingURL=main.css.map */

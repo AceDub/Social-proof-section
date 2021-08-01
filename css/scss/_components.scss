@@ -1,0 +1,12 @@
+@mixin flex-center($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin grid-center() {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
